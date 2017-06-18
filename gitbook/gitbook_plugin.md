@@ -11,6 +11,8 @@
 > cd ./gitbook-plugin-search-pro
 > npm install
 ```
+* gitbook 安装
+虽然该方法最终还是通过npm进行安装，但该安装方式更加简单方便。仅需在book.json中定义你需要使用的插件，然后执行`gitbook install`则会自动的进行安装
 
 ### 使用
 使用插件比较的简单，仅需在book.json中增加以下代码
@@ -26,5 +28,8 @@
 简介：一个增强的搜索插件，重点是支持中文。  
 插件地址：[search-pro](https://plugins.gitbook.com/plugin/search-pro)
 ### github
-简介：在界面的右上角增加一个 GitHub 的小图标，点击该图标则跳转到对应的界面  
+简介：在界面的右上角增加一个 GitHub 的小图标，点击该图标则跳转到对应的界面。  
 插件地址：[github](https://plugins.gitbook.com/plugin/github)
+### splitter
+简介：使得侧边栏的宽度可以自由调节。  
+插件地址：[splitter](https://plugins.gitbook.com/plugin/splitter)
