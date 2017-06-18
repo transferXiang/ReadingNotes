@@ -3,5 +3,16 @@
 
     "author" : "transfer",
 
-    "language" : "zh-hans"
+    "language" : "zh-hans",
+
+    "plugins": [
+      "-lunr", "-search", "search-pro",
+      "github@2.0.0"
+    ],
+
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/transferXiang/ReadingNotes"
+        }
+    }
 }

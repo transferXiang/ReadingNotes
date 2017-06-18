@@ -6,4 +6,5 @@
     * [Class And Static Method](python/class_static_method.md)
 
 * [GitBook](gitbook/readme.md)
-    * [GitBook高级功能](gitbook/gitbookadvance.md)
+    * [高级功能](gitbook/gitbookadvance.md)
+    * [插件](gitbook/gitbook_plugin.md)
