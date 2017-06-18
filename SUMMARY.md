@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [知识杂货铺](README.md)
 
 * [Python](python/README.md)
     * [Class And Static Method](python/class_static_method.md)

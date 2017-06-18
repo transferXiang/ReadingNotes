@@ -1,7 +1,8 @@
 # GitBook基础
 ## GitBook简介
 GitBook 是一个命令行工具。它基于 Node.js 、 Markdown 、 git 等，可以为你创建美观的书籍，通常它可以导出为网页或电子书（pdf、epub、mobi）。  
-GitBook 和 GitBook.com 不是同一个概念，一个是工具，一个是网站。他们之间的关系类似于 Git 与 GitHub。通过 GitBook 创建的书籍可以通过 GitBook.com 进行线上存储和管理。同时 GitBook.com 与 GitHub 账号以及仓储是可以进行绑定与同步的，因此 Gitbook.com 中的文字等都可以在 GitHub 上进行托管，这对熟悉 Git 以及 GitHub 的用户（特别是程序员）来说是一种全新的方式管理个人文档，更将在编程领域中的一些先进的团队协作工作流引入到书籍创作中来。
+GitBook 和 GitBook.com 不是同一个概念，一个是工具，一个是网站。他们之间的关系类似于 Git 与 GitHub。  
+通过 GitBook 创建的书籍可以通过 GitBook.com 进行线上存储和管理。同时 GitBook.com 与 GitHub 账号以及仓储是可以进行绑定与同步的，因此 Gitbook.com 中的文字等都可以在 GitHub 上进行托管，这对熟悉 Git 以及 GitHub 的用户（特别是程序员）来说是一种全新的方式管理个人文档，更将在编程领域中的一些先进的团队协作工作流引入到书籍创作中来。
 
 ## GitBook安装
 1. 安装Node.js  
@@ -11,7 +12,7 @@ GitBook 和 GitBook.com 不是同一个概念，一个是工具，一个是网�
  * 允许用户从NPM服务器下载别人编写的第三方包到本地使用。
  * 允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。
  * 允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。
- 
+
  打开命令行工具，输入一下指令回车即可进行安装（安装过程可能比较慢、或者失败，多试几次）
  ```
  npm install gitbook-cli -g
