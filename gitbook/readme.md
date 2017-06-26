@@ -46,3 +46,4 @@ gitbook init
 * [官方帮助文档](https://help.gitbook.com/)
 * [GitBook Toolchain Documentation](https://toolchain.gitbook.com/)
 * [使用gitbook制作属于自己的电子书](https://www.zybuluo.com/yangfch3/note/158290)
+* [添加锚点](https://hltj.gitbooks.io/sandbox/content/index.html)

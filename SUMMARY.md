@@ -9,3 +9,6 @@
 * [GitBook](gitbook/readme.md)
     * [高级功能](gitbook/gitbookadvance.md)
     * [插件](gitbook/gitbook_plugin.md)
+
+* [其他](other/readme.md)
+    * [MarkDown插入公式](other/latex.md)
