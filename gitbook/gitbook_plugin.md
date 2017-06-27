@@ -3,7 +3,7 @@
 插件的使用将为读者提供更多友好的功能，下面将以 search-pro 的安装来做个简单介绍：
 ### 安装
 * 在线安装  
-在线安装是通过npm来进行的:`npm install gitbook-plugin-search-pro`
+在线安装是通过npm来进行的:`npm install gitbook-plugin-插件名称`
 * 离线安装
 需要先下载插件，然后再通过npm进行安装。
 ```
@@ -12,7 +12,8 @@
 > npm install
 ```
 * gitbook 安装
-虽然该方法最终还是通过npm进行安装，但该安装方式更加简单方便。仅需在book.json中定义你需要使用的插件，然后执行`gitbook install`则会自动的进行安装
+虽然该方法最终还是通过npm进行安装，但该安装方式更加简单方便。仅需在book.json中定义你需要使用的插件，然后执行`gitbook install`则会自动的进行安装  
+有的时候通过`gitbook install`进行安装时较慢且容易长时间卡住，这时可以尝试`npm`进行安装
 
 ### 使用
 使用插件比较的简单，仅需在book.json中增加以下代码
@@ -33,3 +34,9 @@
 ### splitter
 简介：使得侧边栏的宽度可以自由调节。  
 插件地址：[splitter](https://plugins.gitbook.com/plugin/splitter)
+### toggle-chapters
+简介：侧边栏章节可以进行折叠
+插件地址：[toggle-chapters](https://plugins.gitbook.com/plugin/toggle-chapters)
+### expandable-chapters-small
+简介：侧边栏章节可以进行折叠，且显示小箭头
+插件地址：[expandable-chapters-small](https://plugins.gitbook.com/plugin/expandable-chapters-small)
