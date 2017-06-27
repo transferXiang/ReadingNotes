@@ -9,7 +9,8 @@
       "-lunr", "-search", "search-pro",
       "github@2.0.0",
       "splitter",
-      "expandable-chapters-small"
+      "expandable-chapters-small",
+      "katex"
     ],
 
     "pluginsConfig": {
