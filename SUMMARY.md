@@ -11,10 +11,11 @@
     * [插件](gitbook/gitbook_plugin.md)
 
 * [Docker](docker/readme.md)
-    * [Docker](docker/docker_readme.md)
+    * [Docker加速器](docker/docker_readme.md)
 
 * [Linux](linux/readme.md)
     * [Docker](linux/share_dir.md)
 
-* [其他](other/latex.md)
+* [其他](other/readme.md)
     * [MarkDown插入公式](other/latex.md)
+    * [软件推荐](other/soft_recommended.md)
