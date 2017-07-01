@@ -10,7 +10,11 @@
     * [高级功能](gitbook/gitbookadvance.md)
     * [插件](gitbook/gitbook_plugin.md)
 
-* [Docker](Docker/docker_readme.md)
+* [Docker](docker/readme.md)
+    * [Docker](docker/docker_readme.md)
+
+* [Linux](linux/readme.md)
+    * [Docker](linux/share_dir.md)
 
 * [其他](other/latex.md)
     * [MarkDown插入公式](other/latex.md)

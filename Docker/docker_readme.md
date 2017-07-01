@@ -2,7 +2,7 @@
 
 ## Docker Toolbox
 （不推荐使用 docker toolbox，建议使用新的 docker for mac 及 docker for windows 以在这两种平台运行 docker ）
-请确认你的 Docker Toolbox 已经启动，并执行下列命令（请将 加速地址 替换为在加速器页面获取的专属地址）
+请确认你的 Docker Toolbox **已经启动**，并执行下列命令（请将 加速地址 替换为在加速器页面获取的专属地址）
 ```
 docker-machine ssh default
 sudo sed -i "s|EXTRA_ARGS='|EXTRA_ARGS='--registry-mirror=加速地址 |g" /var/lib/boot2docker/profile
