@@ -14,7 +14,7 @@
     * [Docker常用指令](docker/docker_readme.md)
 
 * [Linux](linux/readme.md)
-    * [Docker](linux/share_dir.md)
+    * [虚拟机下共享文件夹](linux/share_dir.md)
 
 * [其他](other/readme.md)
     * [MarkDown插入公式](other/latex.md)
