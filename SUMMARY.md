@@ -11,7 +11,7 @@
     * [插件](gitbook/gitbook_plugin.md)
 
 * [Docker](docker/readme.md)
-    * [Docker加速器](docker/docker_readme.md)
+    * [Docker常用指令](docker/docker_readme.md)
 
 * [Linux](linux/readme.md)
     * [Docker](linux/share_dir.md)
