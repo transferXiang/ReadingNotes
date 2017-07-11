@@ -15,6 +15,7 @@
 
 * [Linux](linux/readme.md)
     * [虚拟机下共享文件夹](linux/share_dir.md)
+    * [Linux国内源设置](linux/source_list.md)
 
 * [其他](other/readme.md)
     * [MarkDown插入公式](other/latex.md)

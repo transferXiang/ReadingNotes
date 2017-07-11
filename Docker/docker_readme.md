@@ -75,14 +75,75 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://c6607f77
 ## 数据管理
 ### 概念
 数据卷是一个可供容器使用的特殊目录，它绕过文件系统，可以提供很多有用的特性。数据卷的使用，类似于Linux下对目录或文件进行mount操作。
-
 ### 基本指令
 * 在容器内创建一个数据卷
     `docker run -it -v /my_dir ubuntu /bin/bash`
 * 挂载一个主机目录或文件作为数据卷
     `docker run -it -v /host_dir:/my_dir:[option] ubuntu /bin/bash`  
-    将本地主机`/host_dir`挂在到了容器中的`/my_dir`中。注意需要使用绝对路径。     option:`ro`只读 `rw`读写
+    将本地主机`/host_dir`挂在到了容器中的`/my_dir`中。注意需要使用绝对路径。     
+    option:`ro`只读 `rw`读写
+* 从另外一个容器中挂载数据卷
+    `docker run --volumes-from container_name_from --name container_name_to`  
+    使得`container_name_to`能够看到`container_name_from`容器的数据卷，这样就可以实现多个容器间数据的共享和交换。
 
+## DockerFile
+Dockerfile是一个文本格式的配置文件，通过Dockerfile可以创建自动以的镜像。下面是一个简单的例子，用于搭建python运行环境。
+```
+# This dockerfile uses the ubuntu image
+# VERSION 2 - EDITION 1
+# Author: docker_user
+# Command format: Instruction [arguments / command] ..
+# 指定基于的基础镜像
+FROM ubuntu
+# 维护者信息
+MAINTAINER docker_user docker_user@email.com
+# 镜像的操作指令
+RUN apt-get update
+RUN apt-get apt-get install -y python
+# 容器启动时执行指令
+CMD python
+```
+### 基本指令
+* FROM
+    `FROM <image>:<tag>`指定一个基础镜像。如果在同一个Dockerfile中创建多个镜像时， 可以
+使用多个FROM指令（每个镜像一次）
+* MAINTAINER
+    `MAINTAINER <name>`维护者信息
+* RUN
+    `RUN <command>` 比如`RUN apt-get update`
+    `RUN["executable","param1","param2"]`比如`RUN["/bin/bash","-c","echo hello"]`
+* CMD
+    `CMD["executable","param1","param2"]`指定启动容器时执行的命令， 每个Dockerfile只能有一条CMD命令。
+* EXPOSE
+    `EXPOSE<port>[<port>...]`告诉Docker服务端容器暴露的端口号。需要在容器启动时通过`-P`或`-p`来实现端口映射
+* ENV
+    `ENV<key><value>` 指定一个环境变量， 会被后续RUN指令使用， 并在容器运行
+时保持。
+    ```
+    ENV PG_MAJOR 9.3
+    ENV PG_VERSION 9.3.4
+    RUN curl -SL http://example.com/postgres-$PG_VERSION.tar.xz | tar -xJC /usr/src/postgress && …
+    ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
+    ```
+* ADD
+    `ADD<src><dest>`该命令将复制指定的<src>到容器中的<dest>。 其中<src>可以是Dockerfile所在目录的一个相对路径（文件或目录） ； 也可以是一个URL； 还可以是一个tar文件（自动解压为目录） 。
+* COPY
+    `COPY<src><dest>`与`ADD`功能一样。当使用本地目录为源目录时， 推荐使用COPY。
+* VOLUME
+    `VOLUME["/data"]`创建一个可以从本地主机或其他容器挂载的挂载点， 一般用来存放数据库和需要保持的数据等
+* ONBUILD
+    配置当所创建的镜像作为其他新创建镜像的基础镜像时， 所执行的操作指令。 例如，Dockerfile使用如下的内容创建了镜像image-A。
+    ```
+    [...]
+    ONBUILD ADD . /app/src
+    ONBUILD RUN /usr/local/bin/python-build --dir /app/src
+    [...]
+    ```
+    如果基于image-A创建新的镜像时， 新的Dockerfile中使用FROM image-A指定基础镜像时， 会自动执行ONBUILD指令内容， 等价于在后面添加了两条指令。
+    使用ONBUILD指令的镜像， 推荐在标签中注明， 例如ruby： 1.9-onbuild
+
+### 创建镜像
+    `docker build -t image_name:tag docker_file_dir`
 
 ## 其他指令
 * 显示容器的标准输出
