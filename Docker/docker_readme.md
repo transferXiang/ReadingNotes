@@ -126,7 +126,7 @@ CMD python
     ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
     ```
 * ADD
-    `ADD<src><dest>`该命令将复制指定的<src>到容器中的<dest>。 其中<src>可以是Dockerfile所在目录的一个相对路径（文件或目录） ； 也可以是一个URL； 还可以是一个tar文件（自动解压为目录） 。
+    `ADD<src><dest>`该命令将复制指定的<src>到容器中的<dest>。 其中<src>可以是 *Dockerfile所在目录的* 一个相对路径（文件或目录） ； 也可以是一个URL； 还可以是一个tar文件（自动解压为目录） 。
 * COPY
     `COPY<src><dest>`与`ADD`功能一样。当使用本地目录为源目录时， 推荐使用COPY。
 * VOLUME
@@ -144,6 +144,25 @@ CMD python
 
 ### 创建镜像
     `docker build -t image_name:tag docker_file_dir`
+
+## Docker Compose
+Docker Compose是一个用来定义和运行复杂应用的Docker工具。使用Compose，你可以在一个文件中定义一个多容器应用，然后使用一条命令来启动你的应用，完成一切准备工作。
+* [更多说明](https://github.com/docker/compose/)
+* [安装说明](https://docs.docker.com/compose/install/)
+### 安装
+Linux 下的安装：
+```
+sudo -i
+curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+其中`$dockerComposeVersion`表示版本号，比如下载版本 1.14.0则写为：
+```
+sudo -i
+curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+通过执行
 
 ## 其他指令
 * 显示容器的标准输出
