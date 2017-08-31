@@ -6,6 +6,7 @@
     * [Class And Static Method](python/class_static_method.md)
     * [装饰器](python/decorator.md)
     * [jupyter安装](python/jupyter.md)
+    * [数据分析速查表](python/cheat_sheet.md)
 
 * [GitBook](gitbook/readme.md)
     * [高级功能](gitbook/gitbookadvance.md)
