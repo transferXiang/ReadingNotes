@@ -14,3 +14,7 @@ _book
 #*.epub
 #*.mobi
 #*.pdf
+
+# yu writer config
+yulib.config
+yulib.resource
